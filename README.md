@@ -6,9 +6,19 @@ ABHPC is a diskless based linux cluster system, which is focusing on the high pe
 
 This project is mainly provided to administrators and users of the ABHPC system. The author can provide paid services to those who want to build an ABHPC system. The price starts at least $2,000 depending on the size of the system, which is calculated by at an hourly rate of $50. Again, the author provides services but NOT software. Any commercial software needs to be certified by the users. If you are interested in ABHPC system, you can contact me by sending an email (xyliucd#AT#foxmail.com).
 
-遵循一般Linux系统的规则，**凡命令行开头为"#"的，表明此时正在使用root账户，而命令行开头为"$"的，则表明此时在使用普通用户**。建议没有Linux系统使用经验的用户，首先阅读[Linux常用命令](User/Linux常用命令.md)。
+### 2. Instruction
 
-本教程中，部分命令是ABHPC特有的脚本命令，在此不再详细说明。
+According to the rules in Linux, **the sign "#" at the head of a command means a root's privilege, and sign "$" means common user's.** Fresh users should read [Common commands in Linux](User/Linux_commands.md) first.
+
+Some commands in ABHPC are developed by the author, which will not be elaborate in this project.
+
+### 3. Structure of this project
+
+#### Common Users
+
+#### Administrators
+
+
 
 本项目针对普通用户和管理员提供以下教程：
 
