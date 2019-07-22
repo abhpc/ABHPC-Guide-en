@@ -6,40 +6,34 @@ ABHPC is a diskless based linux cluster system, which is focusing on the high pe
 
 This project is mainly provided to administrators and users of the ABHPC system. The author can provide paid services to those who want to build an ABHPC system. The price starts at least $2,000 depending on the size of the system, which is calculated by at an hourly rate of $50. Again, the author provides services but NOT software. Any commercial software needs to be certified by the users. If you are interested in ABHPC system, you can contact me by sending an email (xyliucd#AT#foxmail.com).
 
+The basic Linux system for ABHPC is CentOS 7 or Ubuntu 16.04 LTS.
+
 ### 2. Instruction
 
 According to the rules in Linux, **the sign "#" at the head of a command means a root's privilege, and sign "$" means common user's.** Fresh users should read [Common commands in Linux](User/Linux_commands.md) first.
 
-Some commands in ABHPC are developed by the author, which will not be elaborate in this project.
+Some commands in ABHPC are developed by the author, which will not be elaborated in this project.
 
-### 3. Structure of this project
+### 3. Structure of This Project
 
-#### Common Users
+#### For Common Users
 
-#### Administrators
+[Connect to the master node by ssh client.](User/ssh_client.md)
 
+[Remote graphical desktop (MATE desktop) by x2go.](User/x2go.md)
 
+[How to use slurm to run jobs.](User/slurm_user.md)
 
-本项目针对普通用户和管理员提供以下教程：
+[Common errors.](User/errors.md)
 
-### 1.普通用户
+[Useful knowledge for high performance computing.](User/knowledge.md)
 
-[ssh远程连接集群](User/ssh远程连接集群.md)
+#### For Administrators
 
-[远程桌面连接集群](User/使用x2go连接Ubuntu远程桌面.md)
+[Add a user in ABHPC system.](Admin/add_user.md)
 
-[Slurm用户教程](User/Slurm用户教程.md)
+[How to manage the slurm system.](Admin/manage_slurm.md)
 
-[常见错误](User/常见错误.md)
+[Set up a MATE desktop for x2go users.](Admin/x2go_server.md)
 
-[并行计算常用知识](并行计算常用知识)
-
-### 2.集群管理员
-
-新建集群用户: [CentOS 7](Admin/CentOS_7/新建集群用户.md)     [Ubuntu 16.04LTS](Admin/Ubuntu_16.04/新建集群用户.md)
-
-[Slurm管理教程](Admin/Slurm管理教程.md)
-
-[配置服务器的远程MATE桌面](Admin/配置服务器的远程MATE桌面.md)
-
-[常用软件的安装](常用软件的安装)
+[Install common software.](Install_software)
