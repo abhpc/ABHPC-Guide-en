@@ -38,5 +38,5 @@ done
 # Run your MPI programs. The output will be written into a file named "[JOBNAME].sta"
 mpirun -genv I_MPI_FABRICS=tcp -machinefile $CURDIR/nodelist.$SLURM_JOB_ID $MPI_CMD > $SLURM_JOB_NAME.sta
 
-# clean the nodelist file after the MPI program done.
+# Clean the nodelist file after the MPI program done.
 rm -rf $CURDIR/nodelist.$SLURM_JOB_ID

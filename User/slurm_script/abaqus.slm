@@ -1,4 +1,7 @@
 #! /bin/bash
+
+# This sbatch script is for SIMULIA/ABAQUS.
+
 # Define the job name. Here it is defined as "test", which means that the input file is "test.inp"
 #SBATCH --job-name=test
 

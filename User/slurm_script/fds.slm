@@ -1,23 +1,26 @@
 #! /bin/bash
-# 这里指定作业名称，这里假定输入文件是test.fds
+
+# This sbatch script is for Fire Dynamics Simulator (FDS).
+
+# Defien job name. Here the job name is defined as "test", which means the input file is "test.fds"
 #SBATCH --job-name=test
 
-# 提交到哪个队列（分区）
+# Define the partition to submit. The partition name can be obtained by command "sinfo"
 #SBATCH --partition=E5-2640V4
 
-# 使用多少个节点
+# Define the number of nodes allocated.
 #SBATCH --nodes=4
 
-# 每个节点使用多少核
+# Define the number of cores allocated per node.
 #SBATCH --ntasks-per-node=20
 
-# 错误和输出文件
+# Define the error and output files.
 #SBATCH --error=%j.err
 #SBATCH --output=%j.out
 
-# 以下行如果不懂，可以不管，按默认的即可。如果你知道其含义的话，可以进行自定义修改。
+# Do not change any lines unless you know what you are doing.
 
-# 以下生成MPI的nodelist
+# Generate a MPI nodelist.
 CURDIR=`pwd`
 rm -rf $CURDIR/nodelist.$SLURM_JOB_ID
 NODES=`scontrol show hostnames $SLURM_JOB_NODELIST`
@@ -25,10 +28,10 @@ for i in $NODES
 do
 	echo "$i:$SLURM_NTASKS_PER_NODE" >> $CURDIR/nodelist.$SLURM_JOB_ID
 done
-# 生成nodelist结束
+# End of generation.
 
-# 通过MPI运行fds
+# Run fds program by mpirun command.
 mpirun -genv I_MPI_FABRICS=tcp -machinefile $CURDIR/nodelist.$SLURM_JOB_ID fds $SLURM_JOB_NAME.fds > $SLURM_JOB_NAME.sta
 
-# 运行完后清理nodelist
+# Clean the nodelist file after the fds program done.
 rm -rf $CURDIR/nodelist.$SLURM_JOB_ID

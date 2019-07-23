@@ -1,4 +1,7 @@
 #! /bin/bash
+
+# This script is 
+
 # 这里指定作业名称，注意vasp的输入文件无需特意指定
 #SBATCH --job-name=test
 
