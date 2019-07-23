@@ -6,7 +6,7 @@ ABHPC is a diskless based linux cluster system, which is focusing on the high pe
 
 This project is mainly provided to administrators and users of the ABHPC system. The author can provide paid services to those who want to build an ABHPC system. The price starts at least $2,000 depending on the size of the system, which is calculated by at an hourly rate of $50. Again, the author provides services but NOT software. Any commercial software needs to be certified by the users. If you are interested in ABHPC system, you can contact me by sending an email (xyliucd#AT#foxmail.com).
 
-The basic Linux system for ABHPC is CentOS 7 or Ubuntu 16.04 LTS.
+The basic Linux system for ABHPC is CentOS 7 or Ubuntu 16.04 LTS. The job scheduling system used in ABHPC is slurm.
 
 ### 2. Instruction
 
@@ -23,6 +23,8 @@ Some commands in ABHPC are developed by the author, which will not be elaborated
 [Remote graphical desktop (MATE desktop) by x2go.](User/x2go.md)
 
 [How to use slurm to run jobs.](User/slurm_user.md)
+
+[Common sbatch scripts.](User/slurm_script)
 
 [Common errors.](User/errors.md)
 
