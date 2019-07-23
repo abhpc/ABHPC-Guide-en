@@ -18,7 +18,7 @@
 # Define the PATH of your abaqus program.
 ABAQUS_EXE="/opt/simulia/Commands/abaqus"
 
-# Define user args (e.g., ADD_ARGS="user=myuser.f").
+# Define user args (e.g., define ADD_ARGS="user=myuser.f" for user routine).
 ADD_ARGS=""
 
 # Do not change any lines unless you know what you are doing.
