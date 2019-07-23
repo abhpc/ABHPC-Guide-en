@@ -15,8 +15,9 @@
 #SBATCH --error=%j.err
 #SBATCH --output=%j.out
 
-# Define the PATH of your abaqus program.
+# Define the PATH and environment file of your abaqus program.
 ABAQUS_EXE="/opt/simulia/Commands/abaqus"
+ABAQUS_ENV="/opt/simulia/6.14-2/SMA/site/abaqus_v6.env"
 
 # Define user args (e.g., define ADD_ARGS="user=myuser.f" for user routine).
 ADD_ARGS=""
@@ -25,7 +26,7 @@ ADD_ARGS=""
 
 # Create a new environment files for abaqus in current directory.
 rm -rf $PWD/abaqus_v6.env
-cp /opt/simulia/6.14-2/SMA/site/abaqus_v6.env $PWD/abaqus_v6.env
+cp $ABAQUS_ENV $PWD/abaqus_v6.env
 node_list=$(scontrol show hostname ${SLURM_NODELIST} | sort -u)
 mp_host_list="["
 for host in ${node_list}; do
